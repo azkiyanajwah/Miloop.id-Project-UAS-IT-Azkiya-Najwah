@@ -1,11 +1,4 @@
-/* ==========================================================
-   miloop.id - JavaScript Logic (Versi Paling Pintar & Detail)
-   Menangani Detail Produk, Stok Real-time, Keranjang, dll.
-========================================================== */
-
-// ==================== 1. DATABASE PRODUK (36 Produk Unik) ====================
 const defaultProdukData = [
-    // --- AMIGURUMI (12) ---
     { id: 1, nama: "Amigurumi Bunny", kategori: "amigurumi", harga: 85000, img: "images/amigurumi-bunny.jpeg", deskripsi: "Boneka rajut handmade berbentuk kelinci yang menggemaskan dengan sentuhan detail yang rapi. Cocok dijadikan koleksi, dekorasi kamar, maupun hadiah spesial untuk orang tersayang." },
     { id: 2, nama: "Amigurumi Duck Sunflower", kategori: "amigurumi", harga: 80000, img: "images/amigurumi-duck-sunflower.jpeg", deskripsi: "Boneka rajut handmade berbentuk bebek dengan hiasan bunga matahari yang ceria dan unik. Memberikan kesan manis sebagai dekorasi atau koleksi favorit." },
     { id: 3, nama: "Amigurumi Howl", kategori: "amigurumi", harga: 75000, img: "images/amigurumi-howl.jpeg", deskripsi: "Boneka rajut handmade yang terinspirasi dari karakter dalam Howl's Moving Castle. Dibuat dengan penuh ketelitian sehingga cocok untuk para pecinta Studio Ghibli." },
@@ -19,7 +12,6 @@ const defaultProdukData = [
     { id: 11, nama: "Amigurumi Zootopia", kategori: "amigurumi", harga: 90000, img: "images/amigurumi-zootopia.jpeg", deskripsi: "Boneka rajut handmade yang terinspirasi dari karakter Zootopia. Memiliki desain unik dan cocok dijadikan hadiah maupun koleksi." },
     { id: 12, nama: "Amigurumi Zoro", kategori: "amigurumi", harga: 75000, img: "images/amigurumi-zoro.jpeg", deskripsi: "Boneka rajut handmade karakter Roronoa Zoro dengan detail yang khas. Sangat cocok untuk melengkapi koleksi para penggemar One Piece." },
 
-    // --- BUCKET HAT (8) ---
     { id: 13, nama: "Strawberry Hat", kategori: "buckethat", harga: 135000, img: "images/bucket hat strawberry.jpeg", deskripsi: "Topi rajut handmade dengan motif stroberi yang manis dan estetik. Nyaman digunakan untuk aktivitas sehari-hari sekaligus mempercantik penampilan." },
     { id: 14, nama: "BMO Finn Hat", kategori: "buckethat", harga: 120000, img: "images/bucket-hat-bmo-finn.jpeg", deskripsi: "Topi rajut handmade bertema BMO dan Finn dengan desain unik yang cocok untuk para penggemar Adventure Time." },
     { id: 15, nama: "Cat Character Hat", kategori: "buckethat", harga: 145000, img: "images/bucket-hat-cat-character.jpeg", deskripsi: "Topi rajut handmade dengan karakter kucing yang lucu dan menggemaskan. Cocok dipadukan dengan berbagai gaya kasual." },
@@ -29,7 +21,6 @@ const defaultProdukData = [
     { id: 19, nama: "Monster inc Hat", kategori: "buckethat", harga: 130000, img: "images/bucket-hat-monster-inc.jpeg", deskripsi: "Topi rajut handmade bertema Monsters, Inc. dengan desain lucu yang cocok untuk koleksi maupun dipakai sehari-hari." },
     { id: 20, nama: "Soot Sprite Ghibli Hat", kategori: "buckethat", harga: 125000, img: "images/bucket-hat-soot-sprite-ghibli.jpeg", deskripsi: "Topi rajut handmade bertema Soot Sprite dari Studio Ghibli. Desainnya unik dan cocok untuk melengkapi gaya para pecinta Ghibli." },
 
-    // --- TAS / TOTEBAG (8) ---
     { id: 21, nama: "Beaches Tote Bag", kategori: "bag", harga: 210000, img: "images/totebag-beaches.jpeg", deskripsi: "Tas rajut handmade dengan desain bertema pantai yang sederhana namun estetik. Cocok digunakan untuk aktivitas sehari-hari." },
     { id: 22, nama: "Blue Flower Tote Bag", kategori: "bag", harga: 195000, img: "images/totebag-blue-flower.jpeg", deskripsi: "Tas rajut handmade dengan motif bunga biru yang memberikan kesan elegan dan manis." },
     { id: 23, nama: "Cream Butterfly Bag", kategori: "bag", harga: 150000, img: "images/totebag-cream-butterfly.jpeg", deskripsi: "Tas rajut handmade dengan hiasan kupu-kupu berwarna krem yang cantik dan cocok dipadukan dengan berbagai outfit." },
@@ -39,7 +30,6 @@ const defaultProdukData = [
     { id: 27, nama: "Two Daisy Flower Bag", kategori: "bag", harga: 250000, img: "images/totebag-two-daisy-flower.jpeg", deskripsi: "Tas rajut handmade dengan dua motif bunga daisy yang memberikan kesan sederhana namun menawan." },
     { id: 28, nama: "White Sunflower", kategori: "bag", harga: 175000, img: "images/totebag-white-sunflower.jpeg", deskripsi: "Tas rajut handmade dengan motif bunga matahari putih yang elegan dan unik. Cocok digunakan sebagai tas harian maupun dijadikan hadiah spesial." },
 
-    // --- KEYCHAIN (8) ---
     { id: 29, nama: "Chick Keychain", kategori: "keychain", harga: 35000, img: "images/keychain-chick.jpeg", deskripsi: "Gantungan kunci rajut handmade berbentuk anak ayam yang lucu dan menggemaskan. Cocok digunakan sebagai aksesori tas maupun kunci." },
     { id: 30, nama: "Frog Keychain", kategori: "keychain", harga: 45000, img: "images/keychain-frog.jpeg", deskripsi: "Gantungan kunci rajut handmade berbentuk katak yang lucu dan cocok dijadikan hadiah maupun koleksi." },
     { id: 31, nama: "Jelyfish Keychain", kategori: "keychain", harga: 30000, img: "images/keychain-jelyfish.jpeg", deskripsi: "Gantungan kunci rajut handmade berbentuk ubur-ubur dengan desain unik dan warna yang menarik." },
@@ -50,12 +40,11 @@ const defaultProdukData = [
     { id: 36, nama: "Cute Penguin Keychain", kategori: "keychain", harga: 30000, img: "images/keychain-cute-penguin.jpeg", deskripsi: "Gantungan kunci rajut handmade berbentuk penguin mini dengan desain yang menggemaskan dan estetik." }
 ];
 
-// Inisialisasi Database Produk ke LocalStorage (Ubah key ke V2 agar load deskripsi baru)
 let produkData = JSON.parse(localStorage.getItem('miloop_produk_v3'));
 if (!produkData) {
     produkData = defaultProdukData.map(p => ({
         ...p,
-        stok: 20 // Default stok 20
+        stok: 20 
     }));
     localStorage.setItem('miloop_produk_v2', JSON.stringify(produkData));
 }
@@ -64,17 +53,14 @@ function simpanProduk() {
     localStorage.setItem('miloop_produk_v2', JSON.stringify(produkData));
 }
 
-// State Aplikasi
 let keranjang = JSON.parse(localStorage.getItem('miloop_keranjang')) || [];
 let riwayatPesanan = JSON.parse(localStorage.getItem('miloop_pesanan')) || [];
 let grafikInstance = null;
 
-// ==================== 2. INISIALISASI SAAT WEB DIMUAT ====================
 document.addEventListener('DOMContentLoaded', () => {
     tampilkanProduk(produkData);
     updateBadgeKeranjang();
     
-    // --- FITUR NAMA USER DINAMIS ---
     const namaUser = localStorage.getItem('miloop_nama') || 'Pengunjung';
     
     const menuProfil = document.getElementById('menu-profil-btn');
@@ -88,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         inputNamaCheckout.value = namaUser;
     }
 
-    // Setel opsi stok di dashboard admin
     const selectStok = document.getElementById('pilih-produk-stok');
     if (selectStok) {
         produkData.forEach(p => {
@@ -101,7 +86,6 @@ function formatRupiah(angka) {
     return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(angka);
 }
 
-// ==================== 3. NAVIGASI HALAMAN ====================
 function pindahHalaman(halamanId) {
     document.querySelectorAll('.halaman').forEach(el => el.classList.remove('aktif'));
     const target = document.getElementById('halaman-' + halamanId);
@@ -132,7 +116,6 @@ function cekLoginStatus(targetRole) {
     pindahHalaman(targetRole);
 }
 
-// ==================== 4. KATALOG, PENCARIAN, & DETAIL (POP-UP) ====================
 function tampilkanProduk(data) {
     const grid = document.getElementById('daftar-produk');
     if (!grid) return;
@@ -222,7 +205,6 @@ if(searchInput) searchInput.addEventListener('input', saringProduk);
 if(kategoriSelect) kategoriSelect.addEventListener('change', saringProduk);
 
 
-// ==================== 5. LOGIKA KERANJANG BELANJA & STOK ====================
 function tambahKeKeranjang(id) {
     const produk = produkData.find(p => p.id === id);
     if (produk.stok <= 0) {
@@ -318,7 +300,6 @@ function hapusItem(index) {
     simpanProduk(); simpanKeranjang(); saringProduk();
 }
 
-// ==================== 6. PROSES CHECKOUT ====================
 const formCheckout = document.getElementById('form-checkout');
 if (formCheckout) {
     formCheckout.addEventListener('submit', (e) => {
@@ -394,7 +375,6 @@ if (formCheckout) {
     });
 }
 
-// ==================== 7. PROFIL USER (RIWAYAT PESANAN) ====================
 function renderRiwayatPesanan() {
     const wadah = document.getElementById('user-riwayat-pesanan');
     if (!wadah) return;
@@ -417,7 +397,6 @@ function renderRiwayatPesanan() {
     });
 }
 
-// ==================== 8. DASBOR ADMIN ====================
 function renderTabelAdmin() {
     const tbody = document.getElementById('tabel-pesanan-admin');
     if (!tbody) return;
@@ -475,7 +454,6 @@ if (formStok) {
     });
 }
 
-// ==================== 9. CHART.JS (Grafik Penjualan) ====================
 function updateGrafikAdmin() {
     const ctx = document.getElementById('grafikPenjualan');
     if (!ctx) return;
