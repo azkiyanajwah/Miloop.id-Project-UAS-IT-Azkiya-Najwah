@@ -13,13 +13,11 @@
     <script>
       console.log("GA4 Analytics initialized: Monitoring bounce rate and conversion metrics.");
     </script>
-
-    <!-- Library SweetAlert & Chart.js -->
+ 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS Custom miloop.id -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
 
@@ -41,7 +39,6 @@
 
         h1, h2, h3 { font-family: 'Quicksand', sans-serif; }
 
-        /* Top Bar */
         .top-bar {
             background: var(--secondary-color);
             color: white;
@@ -53,7 +50,6 @@
             font-weight: 600;
         }
 
-        /* Header & Navigasi */
         header {
             background: var(--card-bg);
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -66,7 +62,6 @@
             z-index: 1000;
         }
 
-        /* LOGO STYLING */
         .logo {
             cursor: pointer; 
             display: flex; 
@@ -77,7 +72,7 @@
             height: 45px;
             width: 45px;
             object-fit: cover;
-            border-radius: 50%; /* Membuat logo jadi bulat */
+            border-radius: 50%;
             border: 2px solid var(--secondary-color);
         }
         .logo h1 { margin: 0; font-size: 1.8rem; font-weight: 700; color: var(--primary-color); }
@@ -86,7 +81,6 @@
         .nav-center a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 1rem; transition: color 0.3s; }
         .nav-center a:hover { color: var(--primary-color); }
 
-        /* Menu Pengaturan / Akun Dropdown */
         .account-menu { position: relative; display: inline-block; }
         .btn-account-toggle {
             background: var(--primary-color);
@@ -117,12 +111,10 @@
 
         .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; background: none; border: none; color: var(--primary-color); }
 
-        /* Halaman (SPA) */
         .halaman { display: none; padding: 40px 5%; min-height: 70vh; }
         .halaman.aktif { display: block; animation: fadeUp 0.5s ease-out; }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* BANNER HERO STYLING */
         .banner-hero {
             background: linear-gradient(rgba(61, 64, 91, 0.6), rgba(61, 64, 91, 0.6)), url('https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             border-radius: 24px;
@@ -135,7 +127,6 @@
         .banner-hero h2 { font-size: 2.8rem; margin-bottom: 15px; }
         .banner-hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; line-height: 1.6; }
 
-        /* PRODUK UNGGULAN STYLING */
         .unggulan-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -161,7 +152,7 @@
         .unggulan-card h4 { margin: 0 0 10px 0; color: var(--text-color); font-size: 1.1rem; }
         .unggulan-card p { color: var(--primary-color); font-weight: 700; margin-bottom: 15px; }
 
-        /* Komponen Umum */
+        /* Komponen Umum *
         .input-group { text-align: left; margin-bottom: 20px; }
         .input-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-color); }
         .input-group input, .input-group select, .input-group textarea {
@@ -188,18 +179,15 @@
 </head>
 <body>
 
-    <!-- TOP BAR -->
     <div class="top-bar">
         <div class="top-bar-left">
             <span>🧶 Miloop.id - Premium Crochet</span>
         </div>
     </div>
 
-    <!-- HEADER & NAV -->
     <header>
-        <!-- BISA GANTI LOGO DISINI (Ganti src="img/logo.png") -->
+
         <div class="logo" onclick="pindahHalaman('beranda')">
-            <!-- Jika gambar img/logo.png tidak ada, fallback ke gambar placeholder rajutan -->
             <img src="images/logo.jpeg" onerror="this.src='https://images.unsplash.com/photo-1605282721151-5178553229b4?auto=format&fit=crop&w=100&q=80'" alt="Logo miloop.id">
             <h1>miloop.id</h1>
         </div>
@@ -212,8 +200,7 @@
             <a href="#" onclick="pindahHalaman('tentang'); tutupMainMenu();">Tentang Kami</a>
             <a href="#" onclick="pindahHalaman('keranjang'); tutupMainMenu();">🛒 Keranjang (<span id="badge-cart">0</span>)</a>
         </div>
-
-        <!-- Tombol Akun / Pengaturan -->
+        
         <div class="account-menu">
             <button class="btn-account-toggle" onclick="toggleAccountMenu()">
                 ⚙️ ☰
@@ -226,10 +213,8 @@
         </div>
     </header>
 
-    <!-- ================= HALAMAN BERANDA (DEFAULT AKTIF) ================= -->
     <main id="halaman-beranda" class="halaman aktif container">
         
-        <!-- BANNER HERO (Bisa ganti background image di CSS .banner-hero) -->
         <div class="banner-hero">
             <h2>Rajutan Estetik untuk Keseharianmu</h2>
             <p>Temukan koleksi Amigurumi menggemaskan, Bucket Hat stylish, Totebag fungsional, dan Keychain unik 100% buatan tangan yang dirajut dengan penuh cinta.</p>
@@ -238,48 +223,42 @@
             </button>
         </div>
 
-        <!-- PRODUK UNGGULAN -->
         <div class="card-layout">
             <h2 style="text-align: center; color: var(--primary-color);">🌟 Produk Unggulan Kami</h2>
             <p style="text-align: center; color: #6B7280; margin-bottom: 25px;">Karya rajut favorit (Best Seller) dari miloop.id</p>
             
             <div class="unggulan-grid">
-                <!-- Produk Unggulan 1 (Bunny = ID 1) -->
                 <div class="unggulan-card">
                     <img src="images/amigurumi-tottoro.jpeg" alt="Amigurumi Tottoro">
                     <h4>Amigurumi Tottoro</h4>
                     <p>Rp 95.000</p>
                     <button class="btn-secondary" onclick="tampilkanDetail(10)">Lihat Detail</button> <!-- Tottoro (ID 10) -->
                 </div>
-                
-                <!-- Produk Unggulan 2 (Granny Hat = ID 13) -->
+            
                 <div class="unggulan-card">
                     <img src="images/bucket-hat-giraffe.jpeg" alt="Giraffe Hat">
                     <h4>Giraffe Hat</h4>
                     <p>Rp 85.000</p>
-                    <button class="btn-secondary" onclick="tampilkanDetail(18)">Lihat Detail</button> <!-- Giraffe Hat (ID 18) -->
+                    <button class="btn-secondary" onclick="tampilkanDetail(18)">Lihat Detail</button> 
                 </div>
 
-                <!-- Produk Unggulan 3 (Chunky Tote = ID 21) -->
                 <div class="unggulan-card">
                     <img src="images/totebag-pink-butterfly.jpeg" alt="Pink Butterfly Tote Bag">
                     <h4>Pink Butterfly Tote Bag</h4>
                     <p>Rp 210.000</p>
-                    <button class="btn-secondary" onclick="tampilkanDetail(25)">Lihat Detail</button> <!-- Pink Butterfly (ID 25) -->
+                    <button class="btn-secondary" onclick="tampilkanDetail(25)">Lihat Detail</button> 
                 </div>
 
-                <!-- Produk Unggulan 4 (Mini Daisy Key = ID 29) -->
                 <div class="unggulan-card">
                     <img src="images/keychain-chick.jpeg" alt="Chick Keychain">
                     <h4>Chick Keychain</h4>
                     <p>Rp 35.000</p>
-                    <button class="btn-secondary" onclick="tampilkanDetail(29)">Lihat Detail</button> <!-- Chick Keychain (ID 29) -->
+                    <button class="btn-secondary" onclick="tampilkanDetail(29)">Lihat Detail</button> 
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- ================= HALAMAN KATALOG PRODUK ================= -->
     <main id="halaman-katalog" class="halaman container">
         <div class="card-layout" style="margin-bottom: 25px; background: var(--secondary-color); color: white;">
             <h2 style="margin-bottom: 15px; font-size: 1.8rem;">Katalog miloop.id 🧶</h2>
@@ -296,11 +275,9 @@
             </div>
         </div>
         <div class="product-grid" id="daftar-produk" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px;">
-            <!-- Produk dirender disini lewat script.js -->
         </div>
     </main>
 
-    <!-- ================= HALAMAN TENTANG KAMI ================= -->
     <main id="halaman-tentang" class="halaman container">
         <div class="card-layout" style="text-align: center; padding: 50px 20px;">
             <h2 style="color: var(--primary-color); margin-bottom: 15px; font-size: 2rem;">Kisah Miloop.id</h2>
@@ -309,7 +286,6 @@
         </div>
     </main>
 
-    <!-- ================= HALAMAN KERANJANG & CHECKOUT ================= -->
     <main id="halaman-keranjang" class="halaman container">
         <div class="split-layout">
             <div class="card-layout">
@@ -353,7 +329,6 @@
         </div>
     </main>
 
-    <!-- ================= HALAMAN PROFIL USER ================= -->
     <main id="halaman-user" class="halaman container">
         <div class="card-layout">
             <h2 id="judul-profil-user">👤 Profil Saya</h2>
@@ -363,7 +338,6 @@
         </div>
     </main>
 
-    <!-- ================= HALAMAN ADMIN ================= -->
     <main id="halaman-admin" class="halaman container">
         <div class="card-layout" style="margin-bottom: 25px; background: var(--text-color); color: white;">
             <h2>🛠️ Dasbor Admin - miloop.id</h2>
@@ -371,13 +345,11 @@
         </div>
 
         <div class="split-layout">
-            <!-- Grafik Penjualan -->
             <div class="card-layout">
                 <h3>📈 Analitik Penjualan</h3>
                 <canvas id="grafikPenjualan" width="400" height="250" style="margin-top: 20px;"></canvas>
             </div>
             
-            <!-- Update Stok Produk -->
             <div class="card-layout">
                 <h3>📦 Manajemen Stok Produk</h3>
                 <form id="form-tambah-stok" style="margin-top: 20px;">
@@ -414,8 +386,7 @@
             <button onclick="bersihkanDataAdmin()" style="margin-top:25px; background:#e63946; color:white; border:none; padding:14px 20px; border-radius:12px; cursor:pointer; font-weight: 600; width: 100%;">🗑️ Hapus Seluruh Data Transaksi</button>
         </div>
     </main>
-
-    <!-- FOOTER -->
+    
     <footer style="background: var(--text-color); color: white; padding: 60px 5% 30px 5%; margin-top: 60px;">
         <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
             <div class="footer-section">
@@ -436,14 +407,12 @@
 
     <script src="script.js"></script>
     
-    <!-- Script Interaksi UI -->
     <script>
         function toggleMainMenu() { document.getElementById("main-nav").classList.toggle("show"); }
         function tutupMainMenu() { document.getElementById("main-nav").classList.remove("show"); }
         function toggleAccountMenu() { document.getElementById("account-dropdown").classList.toggle("show"); }
         function tutupAccountMenu() { document.getElementById("account-dropdown").classList.remove("show"); }
 
-        // Fungsi Logout
         function prosesLogout() {
             Swal.fire({
                 title: 'Yakin ingin keluar?',
@@ -456,7 +425,7 @@
                 if (result.isConfirmed) {
                     localStorage.removeItem('miloop_logged_in');
                     localStorage.removeItem('miloop_role');
-                    window.location.href = 'login.html'; // Lempar kembali ke halaman login
+                    window.location.href = 'login.html'; 
                 }
             });
         }
