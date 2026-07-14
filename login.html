@@ -106,29 +106,24 @@
         <p style="margin-top: 20px; font-size: 0.85rem; color: var(--primary-color);">💡 Hint: Login <b>admin/123</b> atau <b>user/123</b></p>
     </div>
 
-    <!-- Script khusus untuk menangani login -->
     <script>
     document.getElementById('form-login-standalone').addEventListener('submit', function(e) {
         e.preventDefault();
         const inputName = document.getElementById('login-username').value;
         const pass = document.getElementById('login-password').value;
 
-        // Password bebas pakai 123 untuk simulasi
         if (pass !== '123') {
             Swal.fire('Gagal', 'Password salah! Gunakan 123', 'error');
             return;
         }
 
-        // Simpan status login
         localStorage.setItem('miloop_logged_in', 'true');
         
-        // Cek apakah dia mau masuk sebagai Admin atau User biasa
         if (inputName.toLowerCase() === 'admin') {
             localStorage.setItem('miloop_role', 'admin');
             localStorage.setItem('miloop_nama', 'Admin miloop');
         } else {
             localStorage.setItem('miloop_role', 'user');
-            // Simpan nama asli yang diketik!
             localStorage.setItem('miloop_nama', inputName); 
         }
         
