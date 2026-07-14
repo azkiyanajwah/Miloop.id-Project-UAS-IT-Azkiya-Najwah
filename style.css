@@ -1,17 +1,9 @@
-/* ==========================================================
-   miloop.id - CSS Stylesheet
-   Tema: Premium Knitwear (Terracotta & Sage Green)
-========================================================== */
-
-/* --- IMPORT GOOGLE FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
-
-/* --- VARIABEL WARNA & UKURAN --- */
 :root {
-    --primary-color: #E07A5F;    /* Terracotta (Oranye Bata) */
-    --secondary-color: #81B29A;  /* Sage Green (Hijau Lembut) */
-    --bg-color: #FDF8F5;         /* Off-White Hangat */
-    --text-color: #3D405B;       /* Deep Blue / Dark Grey */
+    --primary-color: #E07A5F;   
+    --secondary-color: #81B29A;  
+    --bg-color: #FDF8F5;         
+    --text-color: #3D405B;       
     --card-bg: #FFFFFF;
     --border-color: #E5E7EB;
     --radius: 12px;
@@ -19,7 +11,6 @@
     --shadow-md: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* --- RESET GLOBAL --- */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Quicksand', sans-serif;
 }
 
-/* --- TOP BAR --- */
 .top-bar {
     background: var(--secondary-color);
     color: white;
@@ -63,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255,255,255,0.4);
 }
 
-/* --- HEADER & NAVIGASI --- */
 header {
     background: var(--card-bg);
     box-shadow: var(--shadow-sm);
@@ -115,7 +104,6 @@ header {
     color: var(--primary-color);
 }
 
-/* --- MENU AKUN (DROPDOWN) --- */
 .account-menu {
     position: relative;
     display: inline-block;
@@ -177,7 +165,6 @@ header {
 .dropdown-content a.admin-link { color: #d90429; }
 .dropdown-content a.logout-link { color: #555; background: #f9f9f9; }
 
-/* --- HALAMAN SPA ANIMASI --- */
 .halaman {
     display: none;
     padding: 40px 5%;
@@ -199,7 +186,6 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- LAYOUTS UTAMA --- */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -218,7 +204,6 @@ header {
     gap: 30px;
 }
 
-/* --- BANNER HERO & PRODUK UNGGULAN (BERANDA) --- */
 .banner-hero {
     background: linear-gradient(rgba(61, 64, 91, 0.6), rgba(61, 64, 91, 0.6)), url('images/banner.jpeg') center/cover no-repeat;
     border-radius: 24px;
@@ -282,7 +267,6 @@ header {
     margin-bottom: 15px;
 }
 
-/* --- KATALOG PRODUK (Dibuat oleh JS) --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -334,7 +318,6 @@ header {
     margin-bottom: 15px;
 }
 
-/* --- KERANJANG (CART) ITEM --- */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -366,7 +349,6 @@ header {
 .cart-controls button:hover { background: #e0e0e0; }
 .btn-hapus { color: #d90429 !important; }
 
-/* --- FORM & INPUT --- */
 .input-group {
     text-align: left;
     margin-bottom: 20px;
@@ -401,7 +383,6 @@ header {
     box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.15);
 }
 
-/* --- TOMBOL --- */
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
@@ -439,7 +420,6 @@ header {
     background-color: #6a9680;
 }
 
-/* --- TABEL ADMIN --- */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -466,7 +446,6 @@ header {
     background-color: #f9f9f9;
 }
 
-/* --- MOBILE RESPONSIVE --- */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
