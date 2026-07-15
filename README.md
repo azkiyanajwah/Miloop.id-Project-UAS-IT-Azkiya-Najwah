@@ -28,12 +28,10 @@ Website ini menggunakan pendekatan berbasis data untuk pengambilan keputusan bis
 *   **Deployment:** Proyek dideploy menggunakan **GitHub Pages**.
 
 ## 5. Deployment & Links
-*   **GitHub Repository:** [Masukkan Link Repository Kamu Di Sini]
-*   **Live Website (GitHub Pages):** [Masukkan Link GitHub Pages Kamu Di Sini]
+*   **GitHub Repository:** (https://github.com/azkiyanajwah/Miloop.id-Project-UAS-IT-Azkiya-Najwah.git)
+*   **Live Website (GitHub Pages):** (https://azkiyanajwah.github.io/Miloop.id-Project-UAS-IT-Azkiya-Najwah/)
 
 ## 6. Dokumentasi Visual
-*(Pastikan kamu menyertakan screenshot di folder proyekmu dan menautkannya di sini)*
-
 | Desktop View | Mobile View |
 | :---: | :---: |
 | ![Desktop](screenshoot/login-window.png) | ![Mobile](screenshoot/login-mobile.jpeg) |
@@ -60,6 +58,6 @@ Website ini menggunakan pendekatan berbasis data untuk pengambilan keputusan bis
 ![Desktop](screenshoot/login-window.png) | 
 
 
-*Disusun Oleh: [Azkiya Najwah]*
+*Disusun Oleh: Azkiya Najwah*
 *Program Studi: Administrasi Bisnis - International Women University*
 *Kelas: ABI 6 - 2025*
