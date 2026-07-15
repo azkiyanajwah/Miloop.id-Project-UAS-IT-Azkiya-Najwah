@@ -46,12 +46,12 @@ Website ini menggunakan pendekatan berbasis data untuk pengambilan keputusan bis
 ![Desktop](screenshoot/beranda-filter-admin-window.png) | ![Mobile](screenshoot/proses-payment-mobile.jpeg) |
 ![Desktop](screenshoot/keranjang-window.png) | ![Mobile](screenshoot/qr-mobile.jpeg) |
 ![Desktop](screenshoot/qr-window.png) | ![Mobile](screenshoot/succcess-pay-mobile.jpeg) |
-![Desktop](screenshoot/success-payment-window.png) | ![Mobile](images/-mobile.png) |
-![Desktop](screenshoot/profil-riwayat-beli-window.png) | ![Mobile](images/-mobile.png) |
-![Desktop](screenshoot/konfirmasi-logout- user-window.png) | ![Mobile](images/-mobile.png) |
-![Desktop](screenshoot/login-window.png) | ![Mobile](screenshoot/logout-mobile.jpeg) |
-![Desktop](screenshoot/user-admin-window.png) | ![Mobile](screenshoot/konfirmasi-log-out.jpeg) |
-![Desktop](screenshoot/sortir-stok-window.png) | ![Mobile](screenshoot/login-mobile.jpeg) |
+![Desktop](screenshoot/success-payment-window.png) |  ![Mobile](screenshoot/logout-mobile.jpeg) |
+![Desktop](screenshoot/profil-riwayat-beli-window.png) | ![Mobile](screenshoot/konfirmasi-log-out.jpeg) |
+![Desktop](screenshoot/konfirmasi-logout- user-window.png) | ![Mobile](screenshoot/login-mobile.jpeg) |
+![Desktop](screenshoot/login-window.png) | 
+![Desktop](screenshoot/user-admin-window.png) | 
+![Desktop](screenshoot/sortir-stok-window.png) | 
 ![Desktop](screenshoot/riwayat-penjualan-window.png) | 
 ![Desktop](screenshoot/profil-admin-window.png) | 
 ![Desktop](screenshoot/konfirmasi-logout-admin-window.png) |
