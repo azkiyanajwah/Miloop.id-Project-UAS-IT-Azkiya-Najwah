@@ -1,4 +1,4 @@
-# miloop.id - E-Commerce Rajutan Premium
+# Miloop.id - E-Commerce Rajutan Premium
 **Proyek UAS KAIT II - Administrasi Bisnis | Semester Genap 2025/2026**
 
 ## 1. Business Overview
@@ -48,7 +48,7 @@ Website ini menggunakan pendekatan berbasis data untuk pengambilan keputusan bis
 ![Desktop](screenshoot/qr-window.png) | ![Mobile](screenshoot/succcess-pay-mobile.jpeg) |
 ![Desktop](screenshoot/success-payment-window.png) |  ![Mobile](screenshoot/logout-mobile.jpeg) |
 ![Desktop](screenshoot/profil-riwayat-beli-window.png) | ![Mobile](screenshoot/konfirmasi-log-out.jpeg) |
-![Desktop](screenshoot/konfirmasi-logout- user-window.png) | ![Mobile](screenshoot/login-mobile.jpeg) |
+![Desktop](screenshoot/konfirmasi-logout-user-window.png) | ![Mobile](screenshoot/login-mobile.jpeg) |
 ![Desktop](screenshoot/login-window.png) | 
 ![Desktop](screenshoot/user-admin-window.png) | 
 ![Desktop](screenshoot/sortir-stok-window.png) | 
